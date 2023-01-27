@@ -4,6 +4,9 @@ import com.facebook.react.bridge.ReactMethod;
 import com.ribbon.sdk.Ribbon;
 import com.ribbon.sdk.model.StudyState;
 
+import java.util.ArrayList;
+import java.util.Objects;
+
 public class RibbonModule extends com.facebook.react.bridge.ReactContextBaseJavaModule {
 
     Ribbon ribbon = new Ribbon();
@@ -70,13 +73,18 @@ public class RibbonModule extends com.facebook.react.bridge.ReactContextBaseJava
     }
 
     @ReactMethod
-    public void setAttribute(String key, String value) {
-        ribbon.setAttribute(key, value);
+    public void removeAttribute(String key) {
+        ribbon.removeAttribute(key);
     }
 
     @ReactMethod
-    public void removeAttributes(String key) {
-        ribbon.removeAttribute(key);
+    public void removeAttributes(com.facebook.react.bridge.ReadableArray keys) {
+        ArrayList<Object> arrayKeys = keys.toArrayList();
+        java.util.List<String> listKeys = new java.util.ArrayList<>(arrayKeys.size());
+        for (Object object : arrayKeys) {
+            listKeys.add(Objects.toString(object, null));
+        }
+        ribbon.removeAttributes(listKeys);
     }
 
     @ReactMethod

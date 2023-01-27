@@ -13,6 +13,7 @@ RCT_EXTERN_METHOD(getAttributes:
                   (RCTPromiseResolveBlock)resolve
                   rejecter:(RCTPromiseRejectBlock)reject)
 RCT_EXTERN_METHOD(setAttributes: (NSDictionary*) attributes)
+RCT_EXTERN_METHOD(removeAttribute: (NSString*) key)
 RCT_EXTERN_METHOD(removeAttributes: (NSArray*) key)
 RCT_EXTERN_METHOD(removeAllAttributes)
 RCT_EXTERN_METHOD(setIdentity: (NSString*) userId)

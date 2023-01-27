@@ -33,7 +33,7 @@ class RibbonModule: NSObject {
   }
   
   @objc
-  func triggerAndShow(trigger: String) {
+  func triggerAndShow(_ trigger: String) {
     Ribbon.shared.triggerAndShow(trigger)
   }
   
@@ -56,10 +56,15 @@ class RibbonModule: NSObject {
   func setAttributes(_ attributes: [String: Any]) {
     Ribbon.shared.setAttributes(attributes)
   }
-  
+
   @objc
-  func removeAttributes(key: [String]) {
+  func removeAttributes(_ key: [String]) {
     Ribbon.shared.removeAttributes(key)
+  }
+
+  @objc
+  func removeAttribute(_ key: String) {
+    Ribbon.shared.removeAttributes([key])
   }
   
   @objc
@@ -68,7 +73,7 @@ class RibbonModule: NSObject {
   }
   
   @objc
-  func setIdentity(userId: String) {
+  func setIdentity(_ userId: String) {
     Ribbon.shared.setIdentity(userId)
   }
   
