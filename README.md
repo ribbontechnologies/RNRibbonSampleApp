@@ -69,7 +69,7 @@ In order for your Android project to sync, you can either:
 1. go to android studio and click on the sync button
 2. run `cd android && ./gradlew clean && ./gradlew build` from the root of your project
 
-Note - at time of writing, this setup requires the minSdkVersion to be 24 - as seen [here](https://github.com/ribbontechnologies/RNRibbonSampleApp/commit/c457ac10da93bd836fb6905ed964d5b88089f9b3#diff-197b190e4a3512994d2cebed8aff5479ff88e136b8cc7a4b148ec9c3945bd65aR6). This will change in the next release of the android SDK (v1.0.2).
+Note - at time of writing, this setup requires the minSdkVersion to be 24 - as seen [here](https://github.com/ribbontechnologies/RNRibbonSampleApp/commit/c457ac10da93bd836fb6905ed964d5b88089f9b3#diff-197b190e4a3512994d2cebed8aff5479ff88e136b8cc7a4b148ec9c3945bd65aR6). This will change to 21 in the next release of the android SDK (v1.0.2).
 
 More details on our Android SDK can be found [here](https://docs.ribbonapp.com/docs/mobile-android-sdk).
 
