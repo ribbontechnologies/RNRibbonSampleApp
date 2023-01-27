@@ -12,6 +12,9 @@
 		13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.mm */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
+		305EBC4929841B0400523C9E /* RibbonKit in Frameworks */ = {isa = PBXBuildFile; productRef = 305EBC4829841B0400523C9E /* RibbonKit */; };
+		305EBC4C29841B6000523C9E /* RibbonModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 305EBC4B29841B6000523C9E /* RibbonModule.swift */; };
+		305EBC4E29841BEC00523C9E /* RibbonModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 305EBC4D29841BEC00523C9E /* RibbonModule.m */; };
 		7699B88040F8A987B510C191 /* libPods-RNRibbonSampleApp-RNRibbonSampleAppTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19F6CBCC0A4E27FBF8BF4A61 /* libPods-RNRibbonSampleApp-RNRibbonSampleAppTests.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
@@ -37,6 +40,9 @@
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = RNRibbonSampleApp/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = RNRibbonSampleApp/main.m; sourceTree = "<group>"; };
 		19F6CBCC0A4E27FBF8BF4A61 /* libPods-RNRibbonSampleApp-RNRibbonSampleAppTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RNRibbonSampleApp-RNRibbonSampleAppTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		305EBC4A29841B5F00523C9E /* RNRibbonSampleApp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RNRibbonSampleApp-Bridging-Header.h"; sourceTree = "<group>"; };
+		305EBC4B29841B6000523C9E /* RibbonModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RibbonModule.swift; sourceTree = "<group>"; };
+		305EBC4D29841BEC00523C9E /* RibbonModule.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RibbonModule.m; sourceTree = "<group>"; };
 		3B4392A12AC88292D35C810B /* Pods-RNRibbonSampleApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RNRibbonSampleApp.debug.xcconfig"; path = "Target Support Files/Pods-RNRibbonSampleApp/Pods-RNRibbonSampleApp.debug.xcconfig"; sourceTree = "<group>"; };
 		5709B34CF0A7D63546082F79 /* Pods-RNRibbonSampleApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RNRibbonSampleApp.release.xcconfig"; path = "Target Support Files/Pods-RNRibbonSampleApp/Pods-RNRibbonSampleApp.release.xcconfig"; sourceTree = "<group>"; };
 		5B7EB9410499542E8C5724F5 /* Pods-RNRibbonSampleApp-RNRibbonSampleAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RNRibbonSampleApp-RNRibbonSampleAppTests.debug.xcconfig"; path = "Target Support Files/Pods-RNRibbonSampleApp-RNRibbonSampleAppTests/Pods-RNRibbonSampleApp-RNRibbonSampleAppTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -60,6 +66,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0C80B921A6F3F58F76C31292 /* libPods-RNRibbonSampleApp.a in Frameworks */,
+				305EBC4929841B0400523C9E /* RibbonKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -116,12 +123,15 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
+				305EBC4D29841BEC00523C9E /* RibbonModule.m */,
+				305EBC4B29841B6000523C9E /* RibbonModule.swift */,
 				13B07FAE1A68108700A75B9A /* RNRibbonSampleApp */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
 				00E356EF1AD99517003FC87E /* RNRibbonSampleAppTests */,
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				BBD78D7AC51CEA395F1C20DB /* Pods */,
+				305EBC4A29841B5F00523C9E /* RNRibbonSampleApp-Bridging-Header.h */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -190,6 +200,9 @@
 			dependencies = (
 			);
 			name = RNRibbonSampleApp;
+			packageProductDependencies = (
+				305EBC4829841B0400523C9E /* RibbonKit */,
+			);
 			productName = RNRibbonSampleApp;
 			productReference = 13B07F961A680F5B00A75B9A /* RNRibbonSampleApp.app */;
 			productType = "com.apple.product-type.application";
@@ -207,7 +220,7 @@
 						TestTargetID = 13B07F861A680F5B00A75B9A;
 					};
 					13B07F861A680F5B00A75B9A = {
-						LastSwiftMigration = 1120;
+						LastSwiftMigration = 1420;
 					};
 				};
 			};
@@ -220,6 +233,9 @@
 				Base,
 			);
 			mainGroup = 83CBB9F61A601CBA00E9B192;
+			packageReferences = (
+				305EBC4729841B0400523C9E /* XCRemoteSwiftPackageReference "ribbon-ios" */,
+			);
 			productRefGroup = 83CBBA001A601CBA00E9B192 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -413,7 +429,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */,
+				305EBC4C29841B6000523C9E /* RibbonModule.swift in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
+				305EBC4E29841BEC00523C9E /* RibbonModule.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -432,6 +450,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 5B7EB9410499542E8C5724F5 /* Pods-RNRibbonSampleApp-RNRibbonSampleAppTests.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -459,6 +478,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 89C6BE57DB24E9ADA2F236DE /* Pods-RNRibbonSampleApp-RNRibbonSampleAppTests.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
 				INFOPLIST_FILE = RNRibbonSampleAppTests/Info.plist;
@@ -500,6 +520,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = RNRibbonSampleApp;
+				SWIFT_OBJC_BRIDGING_HEADER = "RNRibbonSampleApp-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -526,6 +547,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = RNRibbonSampleApp;
+				SWIFT_OBJC_BRIDGING_HEADER = "RNRibbonSampleApp-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
@@ -699,6 +721,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		305EBC4729841B0400523C9E /* XCRemoteSwiftPackageReference "ribbon-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ribbontechnologies/ribbon-ios/";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		305EBC4829841B0400523C9E /* RibbonKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 305EBC4729841B0400523C9E /* XCRemoteSwiftPackageReference "ribbon-ios" */;
+			productName = RibbonKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 83CBB9F71A601CBA00E9B192 /* Project object */;
 }
