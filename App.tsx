@@ -46,7 +46,9 @@ function App(): JSX.Element {
               title="Configure"
               onPress={async () => {
                 RibbonModule.setPreview(true);
-                RibbonModule.configure('6f69871faf94490ebe5d0f846ace4cf4');
+                // https://www.ribbonapp.com/integration/javascript
+                // Copy your Ribbon ID from the integration page
+                RibbonModule.configure('RIBBON_ID');
               }}
             />
             {/* divider */}
